@@ -34,7 +34,7 @@ set({errors:error.message})
             try{
                 await deleteCompetition(id);
                 set((state)=>({
-                    events:state.events.filter(event => event.id !== id)}));
+                    competitions:state.competitions.filter(comp => comp.id !== id)}));
     }
             catch(error){
                 set({errors:error.message});
@@ -50,8 +50,8 @@ const response = await editCompetition(id, {
                     date: comp.date,
 });
 set((state)=>({
-events:state.events.map((event)=>
-event.id === id ? response.data : event
+competitions:state.competitions.map((comp)=>
+comp.id === id ? response.data : comp
 )
 }));
 return response;
@@ -61,6 +61,18 @@ return response;
             }
 
         },
+        getCompetitionById: async (id) => {
+        try {
+            const response = await getAllCompetitions(id); // Fetch single competition
+            if (!response.data) {
+                throw new Error(`Competition with ID ${id} not found`);
+            }
+            return response; // Return full response { data: { id, name, ... } }
+        } catch (error) {
+            set({ errors: error.message });
+            throw error;
+        }
+    },
         
     })
 )

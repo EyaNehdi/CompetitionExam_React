@@ -1,21 +1,28 @@
 {
-    "competitions" : 
-    [ 
-{ 
-"id": "1", 
-"name": "Hackathon", 
-"fees": "100", 
-"date": "01/04/2023", 
-"participants": 10, 
-"description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae consectetur earum distinctio culpa voluptatum eum ad laboriosam qui, dolore repudiandae cupiditate rerum optio eius. Doloribus numquam velit veritatis quisquam magnam." 
-}, 
-{ 
-"id": "2", 
-"name": "Meet & Greet", 
-"fees": "30", 
-"date": "01/04/2023", 
-"participants": 0, 
-"description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae consectetur earum distinctio culpa voluptatum eum ad laboriosam qui, dolore repudiandae cupiditate rerum optio eius. Doloribus numquam velit veritatis quisquam magnam." 
-} 
-] 
+  "competitions": [
+    {
+      "id": "1",
+      "name": "Hackathon",
+      "fees": "100",
+      "date": "01/04/2023",
+      "participants": 10,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae consectetur earum distinctio culpa voluptatum eum ad laboriosam qui, dolore repudiandae cupiditate rerum optio eius. Doloribus numquam velit veritatis quisquam magnam."
+    },
+    {
+      "id": "2",
+      "name": "Meet & Greet",
+      "fees": "30",
+      "date": "01/04/2023",
+      "participants": 0,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae consectetur earum distinctio culpa voluptatum eum ad laboriosam qui, dolore repudiandae cupiditate rerum optio eius. Doloribus numquam velit veritatis quisquam magnam."
+    },
+    {
+      "name": "yasmine",
+      "description": "this is the description",
+      "fees": "bouteraa",
+      "participants": 70,
+      "date": "24/09/2002",
+      "id": "0492"
+    }
+  ]
 }

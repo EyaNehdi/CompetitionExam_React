@@ -1,5 +1,10 @@
 import { Link } from "react-router-dom"
-function Competition({comp}) {
+function Competition({comp,handleDelete}) {
+      const deleteComp = () => {
+        if (window.confirm(`Are you sure you want to delete the event: ${comp.name}?`)) {
+            handleDelete(comp.id); // Call the delete function passed down from parent
+        }
+    };
   return (
     <div>
         <table className="table table-bordered border-color-black">
@@ -20,6 +25,12 @@ function Competition({comp}) {
                 <td>{comp.date}</td>
                 <td> <Link to={`/competition/${comp.id}`} className='link'>
                 Details
+                </Link></td>
+                <td>
+                    <button className="btn btn-danger" onClick={deleteComp}>Delete</button>
+                    </td>
+                    <td><Link to={`/update-competition/${comp.id}`} className='link'>
+                Update
                 </Link></td>
             </tr>
         </tbody>
